@@ -1,4 +1,4 @@
-# Delta-G
+# DELTA-G
 
 Our team is from ... and we think proteins are cool 🙌
 
