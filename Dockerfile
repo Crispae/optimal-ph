@@ -1,10 +1,11 @@
 FROM continuumio/miniconda3
 
-WORKDIR /home/biolib
 
-RUN conda install --yes pytorch scikit-learn pandas numpy \
-    && conda clean -afy
+ADD environment.yml .
+RUN conda env create -f environment.yml
 
-COPY . .
+COPY submission/model.pkl .
+COPY submission/EnzymePh .
 
-ENTRYPOINT [ "python", "src/predict.py" ]
+ ENV PATH=/root/.local:$PATH
+ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "delta", "python", "predictor.py", "--input_csv", "input.csv"]
