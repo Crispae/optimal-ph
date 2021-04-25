@@ -1,4 +1,5 @@
 FROM continuumio/miniconda3
+WORKDIR /home/biolib/
 
 
 ADD environment.yml .
