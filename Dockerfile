@@ -8,4 +8,4 @@ COPY src/model.pkl .
 COPY src/EnzymePh .
 
  ENV PATH=/root/.local:$PATH
-ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "delta", "python", "predictor.py", "--input_csv", "input.csv"]
+ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "delta", "python", "predict.py", "--input_csv", "input.csv"]
