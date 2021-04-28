@@ -40,7 +40,7 @@ dataf = pd.concat([df,comp,aa],axis=1,join="outer")
 
 ## loading  model
 with open("model.pkl","rb") as predictive_model:
-    model = pickle.load(predictive_model)
+    model = joblib.load(predictive_model)
 
 
 

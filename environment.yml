@@ -69,4 +69,4 @@ dependencies:
   - zstd=1.4.5=h9ceee32_0
   - pip:
     - biopython==1.78
-prefix: /home/nadzhou/anaconda3/envs/delta
+
